@@ -17,7 +17,9 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Deploy to Firebase Hosting
-        if: secrets.FIREBASE_SERVICE_ACCOUNT_BOOKLY_87248 != ''
+        env:
+          SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BOOKLY_87248 }}
+        if: env.SERVICE_ACCOUNT != ''
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
