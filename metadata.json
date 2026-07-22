@@ -1,0 +1,6 @@
+{
+  "name": "Bookly",
+  "description": "Discover, explore, and download books across genres and languages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
